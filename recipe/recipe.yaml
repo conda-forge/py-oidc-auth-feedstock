@@ -1,5 +1,5 @@
 context:
-  version: "2604.1.0"
+  version: "2604.2.0"
 
 recipe:
   name: py-oidc-auth-split
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/p/py-oidc-auth/py_oidc_auth-${{ version }}.tar.gz
-    sha256: 04b313fcb7170510cc7cb0cb6e36ffd2686860f0048de5fd358f48292caa23b0
+    sha256: 85968834a3d56ce7fc196b24b9bc612ddd24128f8624b8d919c04129b82b9a59
 
 build:
   number: 0
