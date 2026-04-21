@@ -1,5 +1,5 @@
 context:
-  version: "2604.1.0"
+  version: "2604.2.1"
 
 recipe:
   name: py-oidc-auth-split
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/p/py-oidc-auth/py_oidc_auth-${{ version }}.tar.gz
-    sha256: 04b313fcb7170510cc7cb0cb6e36ffd2686860f0048de5fd358f48292caa23b0
+    sha256: 0b0bffc70b843cd6264fd266cfae3642c71349bc0520a8ddfa52876f63e29a1d
 
 build:
   number: 0
@@ -28,10 +28,13 @@ outputs:
         - libxml2
       run:
         - python >=${{ python_min }}
+        - aiosqlite
         - httpx
         - pydantic
         - cryptography
         - pyjwt
+        - platformdirs
+        - sqlalchemy
         - typing-extensions
     tests:
       - python:
