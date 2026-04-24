@@ -152,6 +152,3 @@ Feedstock Maintainers
 
 * [@antarcticrainforest](https://github.com/antarcticrainforest/)
 
-
-<!-- dummy commit to enable rerendering -->
-
