@@ -1,16 +1,21 @@
+schema_version: 1
+
 context:
-  version: "2606.0.0"
+  version: "2611.0.0"
+  build_number: "0"
 
 recipe:
   name: py-oidc-auth-split
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/p/py-oidc-auth/py_oidc_auth-${{ version }}.tar.gz
-    sha256: 130ee505b6314d230d38ff0d9ec21a17c610269bc6342f2010de0a4630deb130
+  - url: https://files.pythonhosted.org/packages/source/p/py-oidc-auth/py_oidc_auth-${{ version }}.tar.gz
+    sha256: 905adb276cec3ed62855cf716840bf154ab059690a7fc4718cec4eabb0a98122
 
 build:
-  number: 0
+  number: ${{ build_number }}
+  noarch: python
+  script: ${{ PYTHON }} -m pip install .
 
 outputs:
   - package:
@@ -29,6 +34,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - aiosqlite
+        - greenlet
         - httpx
         - pydantic
         - cryptography
