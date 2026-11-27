@@ -14,8 +14,6 @@ source:
 
 build:
   number: ${{ build_number }}
-  noarch: python
-  script: ${{ PYTHON }} -m pip install .
 
 outputs:
   - package:
@@ -34,13 +32,12 @@ outputs:
       run:
         - python >=${{ python_min }}
         - aiosqlite
-        - greenlet
         - httpx
         - pydantic
         - cryptography
         - pyjwt
         - platformdirs
-        - sqlalchemy
+        - sqlalchemy-with-asyncio
         - typing-extensions
     tests:
       - python:
