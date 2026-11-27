@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: "2611.0.0"
-  build_number: "0"
+  version: "2612.0.0"
+  build_number: 0
 
 recipe:
   name: py-oidc-auth-split
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://files.pythonhosted.org/packages/source/p/py-oidc-auth/py_oidc_auth-${{ version }}.tar.gz
-    sha256: 905adb276cec3ed62855cf716840bf154ab059690a7fc4718cec4eabb0a98122
+    sha256: f47a629d838f6069cb042ab9d77f909a2f9011118273543a7b319cafa1a20c4b
 
 build:
   number: ${{ build_number }}
